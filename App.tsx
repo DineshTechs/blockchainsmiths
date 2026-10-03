@@ -32,7 +32,7 @@ const GoogleAnalyticsTracker = () => {
 
   useEffect(() => {
     if (window.gtag) {
-      window.gtag('config', 'G-FSNR7R7HNY', {
+      window.gtag('config', 'G-REZF9XX21G', {
         page_path: location.pathname + location.search
       });
     }
