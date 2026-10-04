@@ -74,8 +74,9 @@ const About: React.FC = () => {
   return (
     <div className="pt-20">
       <SEO 
-        title="About Blockchain Smiths | Expert Full-Stack Blockchain Team"
-        description="A team of senior engineers dedicated to building secure, scalable trustless systems. We bridge the gap between complex blockchain tech and business reality."
+        title="About Us | Expert Web3 Architects & Blockchain Engineers"
+        description="Learn about the senior team behind Blockchain Smiths. We are dedicated to building secure, scalable, and trustless infrastructure for the decentralized future."
+        keywords="Blockchain Engineers, Web3 Architects, Smart Contract Experts, About Blockchain Smiths"
       />
       <Section>
         <motion.div 

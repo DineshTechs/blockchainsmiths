@@ -21,8 +21,9 @@ const Contact: React.FC = () => {
   return (
     <div className="pt-20">
       <SEO 
-        title="Hire Blockchain Developers | Get a Free Web3 Project Quote"
-        description="Looking to hire blockchain developers? Get a free quote for your Web3 project. We specialize in Smart Contracts, DApps, DeFi, and Audits. Book a consultation now."
+        title="Contact Us | Hire Expert Blockchain Developers"
+        description="Ready to launch your Web3 project? Contact Blockchain Smiths for a free consultation and project quote. We specialize in Smart Contracts, DApps, and DeFi security."
+        keywords="Hire Blockchain Developers, Web3 Consultation, Smart Contract Audit Quote"
       />
       <Section>
         <div className="max-w-4xl mx-auto">

@@ -1,9 +1,15 @@
 import React from 'react';
 import Section from '../../components/Section';
+import SEO from '../../components/SEO';
 
 const TermsOfService: React.FC = () => {
   return (
     <div className="pt-20">
+      <SEO 
+        title="Terms of Service"
+        description="Read the terms and conditions for engaging with Blockchain Smiths for your Web3 development needs."
+        type="article"
+      />
       <Section>
         <div className="max-w-4xl mx-auto">
            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Terms of Service</h1>

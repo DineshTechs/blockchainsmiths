@@ -121,8 +121,9 @@ const Blockchains: React.FC = () => {
   return (
     <div className="pt-20">
       <SEO 
-        title="Multi-Chain Development Support | Ethereum, Solana, L2s & Cosmos"
-        description="We build on all major networks: Ethereum, Polygon, Solana, BSC, Arbitrum, Optimism, zkSync, Starknet, and more. Custom L1 blockchains and L2 Rollup solutions."
+        title="Multi-Chain Development | Supporting Ethereum, Solana & L2s"
+        description="We build on all major networks including Ethereum, Polygon, Solana, Arbitrum, and zkSync. Our expertise covers both EVM and non-EVM ecosystems."
+        keywords="Multi-chain development, Ethereum developers, Solana development, Layer 2 solutions, EVM, Rust blockchain"
       />
       <Section className="text-center !pb-10">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Supported <span className="text-brand-secondary">Blockchains</span></h1>

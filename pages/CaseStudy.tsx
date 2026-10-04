@@ -102,10 +102,29 @@ const CaseStudy: React.FC = () => {
   return (
     <>
       <SEO 
-        title={`${project.title} | Blockchain Smiths Case Study`}
+        title={`${project.title} | Case Study`}
         description={`Read how we built ${project.title}. ${project.desc} Technologies used: ${project.tech.join(', ')}.`}
         image={project.image}
         type="article"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": project.title,
+          "description": project.desc,
+          "image": project.image,
+          "author": {
+            "@type": "Organization",
+            "name": "Blockchain Smiths"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Blockchain Smiths",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://blockchainsmiths.com/favicon.svg"
+            }
+          }
+        }}
       />
       
       {/* Hero Section */}

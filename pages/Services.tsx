@@ -506,9 +506,9 @@ const Services: React.FC = () => {
   return (
     <div className="pt-20">
       <SEO 
-        title="Blockchain Development Services | Smart Contract Audits & DeFi Solutions"
-        description="Premier Blockchain Development Services. We specialize in secure Smart Contract Audits, scalable DeFi Solutions, DApps, and Token Launchpads for Ethereum, Solana & L2s."
-        keywords="Smart Contract Audits, DeFi Development Services, Custom Blockchain Development, NFT Marketplace Development, Token Launch Services, DApp Development Company"
+        title="Web3 Services | Smart Contract Audits & DeFi Engineering"
+        description="Comprehensive blockchain engineering services. We specialize in Smart Contract Audits, DeFi protocols, NFT marketplaces, and custom L1/L2 solutions."
+        keywords="Smart Contract Audit, DeFi Development, NFT Marketplace Developer, Custom Blockchain, DApp Development"
       />
       <Section darker className="text-center">
         <motion.h1 

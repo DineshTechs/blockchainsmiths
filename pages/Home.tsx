@@ -563,9 +563,9 @@ const Home: React.FC = () => {
   return (
     <div className="relative bg-brand-darker min-h-screen">
       <SEO 
-        title="Blockchain Development Agency | Smart Contracts, DApps & DeFi Solutions"
-        description="Premier Web3 development firm. We build secure Smart Contracts, NFT Marketplaces, DEXs, and Custom Blockchains. Serving startups in USA, UK, Dubai & Worldwide."
-        keywords="Blockchain Development, Smart Contracts, DApps, Web3 Agency, DeFi Development, NFT Marketplace, Solidity Developers, Rust Blockchain"
+        title="Leading Blockchain Development Agency | Smart Contracts & DeFi"
+        description="Expert full-stack blockchain development agency. We deliver secure Smart Contracts, DApps, DeFi protocols, and NFT solutions for global crypto startups."
+        keywords="Blockchain Development Agency, Smart Contract Developer, DeFi Development, NFT Marketplace, Web3 Agency, Ethereum, Solana"
       />
 
       {/* --- GLOBAL UNIFIED BACKGROUND --- */}

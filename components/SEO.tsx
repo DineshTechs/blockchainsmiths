@@ -7,22 +7,26 @@ interface SEOProps {
   image?: string;
   type?: string;
   keywords?: string;
+  schema?: object;
 }
 
 const SEO: React.FC<SEOProps> = ({ 
   title, 
   description, 
-  image = 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&auto=format&fit=crop', // Default branding image
+  image = 'https://blockchainsmiths.com/og-image.png', // Fallback to a brand image
   type = 'website',
-  keywords
+  keywords,
+  schema
 }) => {
   const location = useLocation();
-  const siteUrl = 'https://blockchainsmiths.com'; // Hardcoded based on sitemap
+  const siteUrl = 'https://blockchainsmiths.com';
   const currentUrl = `${siteUrl}${location.pathname}`;
+  const siteName = 'Blockchain Smiths';
+  const twitterHandle = '@blockchainsmiths';
 
   useEffect(() => {
     // 1. Update Document Title
-    document.title = title;
+    document.title = title.includes(siteName) ? title : `${title} | ${siteName}`;
 
     // Helper to update or create meta tags
     const setMetaTag = (name: string, content: string, attribute = 'name') => {
@@ -38,7 +42,7 @@ const SEO: React.FC<SEOProps> = ({
     // 2. Standard Meta Tags
     setMetaTag('description', description);
     if (keywords) setMetaTag('keywords', keywords);
-    setMetaTag('author', 'Blockchain Smiths');
+    setMetaTag('author', siteName);
     setMetaTag('robots', 'index, follow');
 
     // 3. Open Graph (Facebook, LinkedIn, Discord)
@@ -47,7 +51,7 @@ const SEO: React.FC<SEOProps> = ({
     setMetaTag('og:image', image, 'property');
     setMetaTag('og:url', currentUrl, 'property');
     setMetaTag('og:type', type, 'property');
-    setMetaTag('og:site_name', 'Blockchain Smiths', 'property');
+    setMetaTag('og:site_name', siteName, 'property');
     setMetaTag('og:locale', 'en_US', 'property');
 
     // 4. Twitter Cards
@@ -55,7 +59,8 @@ const SEO: React.FC<SEOProps> = ({
     setMetaTag('twitter:title', title);
     setMetaTag('twitter:description', description);
     setMetaTag('twitter:image', image);
-    setMetaTag('twitter:creator', '@blockchainsmiths');
+    setMetaTag('twitter:site', twitterHandle);
+    setMetaTag('twitter:creator', twitterHandle);
 
     // 5. Canonical URL
     let canonical = document.querySelector('link[rel="canonical"]');
@@ -66,7 +71,35 @@ const SEO: React.FC<SEOProps> = ({
     }
     canonical.setAttribute('href', currentUrl);
 
-  }, [title, description, image, type, keywords, currentUrl]);
+    // 6. JSON-LD Structured Data
+    const existingScript = document.getElementById('json-ld-schema');
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    const defaultSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": siteName,
+      "url": siteUrl,
+      "description": "Leading full-stack blockchain development agency specializing in Smart Contracts, DApps, DeFi, and NFT solutions.",
+      "publisher": {
+        "@type": "Organization",
+        "name": siteName,
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${siteUrl}/favicon.svg`
+        }
+      }
+    };
+
+    const script = document.createElement('script');
+    script.id = 'json-ld-schema';
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema || defaultSchema);
+    document.head.appendChild(script);
+
+  }, [title, description, image, type, keywords, currentUrl, schema]);
 
   return null;
 };

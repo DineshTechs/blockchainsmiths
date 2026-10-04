@@ -91,9 +91,9 @@ const Portfolio: React.FC = () => {
   return (
     <div className="pt-20">
       <SEO 
-        title="Blockchain Portfolio | DeFi Protocols, NFT Marketplaces & Wallets"
-        description="View our track record of deployed Web3 projects. Case studies include Decentralized Exchanges (DEX), NFT Platforms, Cross-chain Bridges, and DAO Governance."
-        keywords="Blockchain Case Studies, Web3 Portfolio, DeFi Projects, NFT Marketplace Development, DAO Governance Tools, Smart Contract Examples"
+        title="Portfolio | Web3 Case Studies & Deployed DApps"
+        description="Explore our successful deployments in DeFi, NFTs, and cross-chain infrastructure. We help startups launch production-grade blockchain applications."
+        keywords="Web3 Portfolio, Blockchain Case Studies, Deployed Smart Contracts, DeFi DApps"
       />
       <Section className="text-center">
         <motion.div

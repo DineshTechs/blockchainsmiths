@@ -1,9 +1,15 @@
 import React from 'react';
 import Section from '../../components/Section';
+import SEO from '../../components/SEO';
 
 const PrivacyPolicy: React.FC = () => {
   return (
     <div className="pt-20">
+      <SEO 
+        title="Privacy Policy"
+        description="Our privacy policy details how we handle and protect your data at Blockchain Smiths."
+        type="article"
+      />
       <Section>
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Privacy Policy</h1>
